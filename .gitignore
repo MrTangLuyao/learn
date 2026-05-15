@@ -1,0 +1,32 @@
+# ───────────────────────────────────────────────────────────────
+#  ⚠  The C-toolchain WASM build is ~453 MB.  Push it via R2/LFS
+#      or a Release attachment — not git history.  See README.md.
+# ───────────────────────────────────────────────────────────────
+lib/runtime/webC/
+
+# Optional: also exclude Monaco if you want a leaner repo (~13 MB).
+# Uncomment if Monaco is loaded from CDN in production:
+# lib/runtime/monaco/
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Node (not used yet)
+node_modules/
+npm-debug.log*
+
+# Local server / cache
+.cache/
+dist/
+.tmp/

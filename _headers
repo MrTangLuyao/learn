@@ -1,0 +1,48 @@
+# Cloudflare Static Assets cache rules.
+# Pattern: own code = always revalidate, big static libs = cache hard.
+#
+# `no-cache` does NOT mean "never cache" — it means the browser MUST
+# revalidate before using its cached copy (sends If-None-Match / If-Modified-
+# Since; server returns 304 when unchanged). So users always see the latest
+# code, but bandwidth is still saved on unchanged files.
+
+# ─── Always revalidate (own pages + own JS/CSS) ───
+/*.html
+  Cache-Control: no-cache, must-revalidate
+
+/index.html
+  Cache-Control: no-cache, must-revalidate
+
+/learn/*
+  Cache-Control: no-cache, must-revalidate
+
+# ─── 3rd-party runtimes — content is fixed, cache hard ───
+# Monaco editor (~5 MB chunked, never changes per version)
+/lib/runtime/monaco/*
+  Cache-Control: public, max-age=2592000
+
+# Emception clang mirror (~470 MB, never changes)
+/lib/runtime/webC/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# xterm.js terminal (used by Python and C lessons)
+/lib/runtime/xterm/*
+  Cache-Control: public, max-age=2592000
+
+# Skulpt Python interpreter
+/lib/runtime/webPython/*
+  Cache-Control: public, max-age=2592000
+
+# sql.js / other engines
+/lib/runtime/*.js
+  Cache-Control: public, max-age=2592000
+
+/lib/runtime/*.wasm
+  Cache-Control: public, max-age=2592000
+
+# ─── Design + assets (rare changes, moderate cache) ───
+/lib/design/*
+  Cache-Control: public, max-age=86400
+
+/lib/resources/*
+  Cache-Control: public, max-age=86400

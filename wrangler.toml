@@ -1,0 +1,22 @@
+# Cloudflare Workers config — this site is pure-static, no Worker code.
+# `npx wrangler deploy` reads this and uploads the contents of `directory`
+# as Static Assets. Limits to be aware of:
+#   - 20,000 files per deployment   (current: ~530)
+#   - 25 MiB per file               (largest: 23 MB lib/runtime/webC/*.br)
+#   - ~9.5 GB total                 (current: ~470 MB, mostly emception mirror)
+#
+# In the Cloudflare Pages dashboard: leave "Build command" empty and set
+# "Deploy command" to `npx wrangler deploy`. This file drives the rest.
+#
+# Custom domain: learn.louie1.com (see ./CNAME for the GitHub Pages mirror).
+
+name = "learn"
+compatibility_date = "2026-05-16"
+
+[assets]
+directory = "./"
+
+# Pretty URLs: Cloudflare strips ".html" automatically (e.g. /index → /index.html).
+# Keep `not_found_handling = "single-page-application"` OFF — the in-page
+# router uses hash routing (#sql, #c/playground, …), so 404s on real paths
+# should 404, not be rewritten to /.

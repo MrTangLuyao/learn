@@ -956,10 +956,23 @@ footer {
   .m3-modal-actions .btn { flex: 1; justify-content: center; }
 }
 
-/* ─── C playground status card states ─── */
-.c-load-card { transition: border-color 0.5s ease, background 0.5s ease; }
-.c-load-card .c-load-title  { transition: color 0.5s ease; }
-.c-load-card .c-load-fill   { transition: width 0.4s ease, background 0.5s ease; }
+/* ─── C runtime loading card (shared by playground + lesson views) ─── */
+.c-load-card { padding: 14px 16px; border: 1px solid var(--border); border-radius: 10px; background: rgba(0,0,0,0.15);
+               transition: border-color 0.5s ease, background 0.5s ease; }
+.c-load-card .c-load-title  { font-size: 13px; color: var(--text); margin-bottom: 12px;
+                              transition: color 0.5s ease; }
+.c-load-card .c-load-track  { height: 4px; background: var(--border); border-radius: 2px; overflow: hidden; position: relative; }
+.c-load-card .c-load-fill   { height: 100%; background: linear-gradient(90deg, var(--accent), var(--accent-on));
+                              border-radius: 2px; width: 0%;
+                              transition: width 0.4s ease, background 0.5s ease; }
+.c-load-card .c-load-fill.is-indeterminate { width: 30% !important; animation: c-load-bounce 1.4s ease-in-out infinite; }
+@keyframes c-load-bounce {
+  0%   { transform: translateX(-50%); }
+  50%  { transform: translateX(250%); }
+  100% { transform: translateX(-50%); }
+}
+.c-load-card .c-load-detail { font-size: 11px; color: var(--muted); margin-top: 8px;
+                              font-variant-numeric: tabular-nums; line-height: 1.5; }
 
 .c-load-card.is-ready              { border-color: rgba(74, 222, 128, 0.55);
                                      background: rgba(74, 222, 128, 0.08); }

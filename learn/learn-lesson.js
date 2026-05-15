@@ -736,13 +736,81 @@ async function renderLesson(courseSlug, lessonIdRaw) {
 
   /* ── C course: ensureC (boots emception iframe) + Monaco, then render ── */
   if (course.type === 'c') {
-    wrap.innerHTML = loadingHtml(currentLang === 'zh' ? '加载 C 编译器…' : 'Loading C compiler…');
+    // Use the same phased progress card as the C playground so lessons get
+    // download % / "initialising clang + sysroot" feedback instead of a
+    // generic spinner that looks frozen for 25 MB.
+    wrap.innerHTML = `
+      <div class="lesson-pane lesson-pane-left fade-in visible" style="max-width:640px; margin:60px auto;">
+        <div class="lesson-meta-row">
+          <span class="lesson-pill">${pickLang(course.title)}</span>
+        </div>
+        <div class="lesson-title-row">
+          <h1 class="lesson-title">${pickLang(lesson.title)}</h1>
+        </div>
+        <p style="color:var(--muted); font-size:14px; line-height:1.8; margin-bottom:18px;">${currentLang === 'zh'
+          ? '首次进 C 课程需加载真 clang 编译器（emception，~25 MB，浏览器会缓存）。'
+          : 'First entry to a C lesson loads the real clang compiler (emception, ~25 MB; cached after).'
+        }</p>
+        <div id="c-load-card" class="c-load-card">
+          <div class="c-load-title" id="c-load-title">${currentLang === 'zh' ? '正在加载 C 编译器…' : 'Loading C compiler…'}</div>
+          <div class="c-load-track"><div class="c-load-fill is-indeterminate" id="c-load-fill"></div></div>
+          <div class="c-load-detail" id="c-load-detail">${currentLang === 'zh' ? '首次约 25 MB，浏览器会缓存。' : 'First time ~25 MB; cached after.'}</div>
+        </div>
+      </div>
+    `;
+
+    const card    = document.getElementById('c-load-card');
+    const titleEl = document.getElementById('c-load-title');
+    const fillEl  = document.getElementById('c-load-fill');
+    const detail  = document.getElementById('c-load-detail');
+    const fmtMB = (bytes) => bytes == null ? '?'
+      : (bytes / (1024 * 1024)).toFixed(bytes < 1024 * 1024 ? 2 : 1) + ' MB';
+    let _readySeen = false;
+    function setProgress({ phase, loaded, total, message }) {
+      if (!card || !document.body.contains(card)) return;
+      if (_readySeen && phase === 'init') return;
+      if (phase === 'download') {
+        titleEl.textContent = currentLang === 'zh' ? '下载 C 编译器' : 'Downloading C compiler';
+        if (total) {
+          const pct = Math.min(100, Math.round((loaded / total) * 100));
+          fillEl.classList.remove('is-indeterminate');
+          fillEl.style.width = pct + '%';
+          detail.textContent = `${pct}%  ·  ${fmtMB(loaded)} / ${fmtMB(total)}` +
+                               (message ? `  ·  ${message}` : '');
+        } else {
+          fillEl.classList.add('is-indeterminate');
+          detail.textContent = `${fmtMB(loaded)}` + (message ? `  ·  ${message}` : '');
+        }
+      } else if (phase === 'init') {
+        titleEl.textContent = currentLang === 'zh' ? '初始化 clang 与系统库' : 'Initialising clang + sysroot';
+        fillEl.classList.add('is-indeterminate');
+        detail.textContent = (message || (currentLang === 'zh'
+          ? '正在加载 libc / libc++（来自浏览器缓存或 CDN）。'
+          : 'Loading libc / libc++ (from cache or CDN).'));
+      } else if (phase === 'ready') {
+        _readySeen = true;
+        card.classList.remove('is-error');
+        card.classList.add('is-ready');
+        fillEl.classList.remove('is-indeterminate');
+        fillEl.style.width = '100%';
+        titleEl.textContent = tt('c-ready-title');
+        detail.textContent  = tt('c-ready-detail');
+      } else if (phase === 'error') {
+        card.classList.add('is-error');
+        titleEl.textContent = currentLang === 'zh' ? 'C 编译器加载失败' : 'C compiler failed to load';
+        fillEl.classList.remove('is-indeterminate');
+        fillEl.style.width = '100%';
+        detail.textContent = message || '';
+      }
+    }
+
     let cEng;
     try {
-      const [eng] = await Promise.all([ensureC(), ensureMonaco()]);
+      const [eng] = await Promise.all([ensureC({ onProgress: setProgress }), ensureMonaco()]);
       cEng = eng;
+      setProgress({ phase: 'ready' });
     } catch(e) {
-      wrap.innerHTML = `<div class="not-found"><h2>${currentLang === 'zh' ? 'C 编译器加载失败' : 'C compiler failed to load'}</h2><p>${tt('not-found-desc')}</p><pre style="margin-top:18px; color:var(--err); font-size:12px;">${escapeHtml(String(e.message || e))}</pre></div>`;
+      setProgress({ phase: 'error', message: String(e.message || e) });
       return;
     }
     return renderCLesson(course, lesson, lessonId, courseSlug, cEng);

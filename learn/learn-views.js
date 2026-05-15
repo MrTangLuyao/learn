@@ -501,21 +501,6 @@ async function renderCPlayground(courseSlug) {
         ? '自由编写 C 代码，使用真 clang 编译器（emception，~25 MB 首次加载）。'
         : 'Free-form C with the real clang compiler (emception, ~25 MB first load).'
       }</p>
-      <style>
-        .c-load-card { padding: 14px 16px; border: 1px solid var(--border); border-radius: 10px; background: rgba(0,0,0,0.15); }
-        .c-load-title { font-size: 13px; color: var(--text); margin-bottom: 12px; }
-        .c-load-track { height: 4px; background: var(--border); border-radius: 2px; overflow: hidden; position: relative; }
-        .c-load-fill  { height: 100%; background: linear-gradient(90deg, var(--accent), var(--accent-on)); border-radius: 2px; transition: width 0.4s ease; width: 0%; }
-        .c-load-fill.is-indeterminate { width: 30% !important; animation: c-load-bounce 1.4s ease-in-out infinite; }
-        @keyframes c-load-bounce {
-          0%   { transform: translateX(-50%); }
-          50%  { transform: translateX(250%); }
-          100% { transform: translateX(-50%); }
-        }
-        .c-load-detail { font-size: 11px; color: var(--muted); margin-top: 8px; font-variant-numeric: tabular-nums; line-height: 1.5; }
-        /* is-error / is-ready visuals live in learn.css so they share the
-           transition palette with other cards; do NOT add display:none here. */
-      </style>
       <div id="c-load-card" class="c-load-card">
         <div class="c-load-title" id="c-load-title">${currentLang === 'zh' ? '正在加载 C 编译器…' : 'Loading C compiler…'}</div>
         <div class="c-load-track"><div class="c-load-fill is-indeterminate" id="c-load-fill"></div></div>

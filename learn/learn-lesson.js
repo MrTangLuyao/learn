@@ -41,6 +41,18 @@
  *   renderPlayground, renderPythonPlayground ← learn-views.js
  * ============================================================ */
 
+/* Lesson tutorials used to live on a single-page blog.html on this
+ * domain; the blog now runs at blog.louie1.com with posts nested in
+ * collections (#/<collection>/<post>). Map a lesson's chapterRef to
+ * its collection by slug prefix. */
+function blogTutorialUrl(ref) {
+  const collection =
+    ref.indexOf('sql-') === 0 ? 'sql' :
+    ref.indexOf('python-') === 0 ? 'python' :
+    ref.indexOf('c-algo-') === 0 ? 'c' : '';
+  return 'https://blog.louie1.com/#/' + (collection ? collection + '/' : '') + ref;
+}
+
 async function renderPythonLesson(course, lesson, lessonId, courseSlug) {
   const wrap = document.getElementById('lesson-content');
 
@@ -65,7 +77,7 @@ async function renderPythonLesson(course, lesson, lessonId, courseSlug) {
       <div class="lesson-title-row">
         <h1 class="lesson-title">${pickLang(lesson.title)}</h1>
         ${lesson.chapterRef ? `
-          <a class="tutorial-link ripple-surface" href="blog.html#${lesson.chapterRef}" target="_blank" rel="noopener">
+          <a class="tutorial-link ripple-surface" href="${blogTutorialUrl(lesson.chapterRef)}" target="_blank" rel="noopener">
             <span>${tt('tutorial-link')}</span>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
@@ -373,7 +385,7 @@ async function renderCLesson(course, lesson, lessonId, courseSlug, cEngine) {
       <div class="lesson-title-row">
         <h1 class="lesson-title">${pickLang(lesson.title)}</h1>
         ${course.slug === 'c-algo' && lesson.chapterRef ? `
-          <a class="tutorial-link ripple-surface" href="blog.html#${lesson.chapterRef}" target="_blank" rel="noopener">
+          <a class="tutorial-link ripple-surface" href="${blogTutorialUrl(lesson.chapterRef)}" target="_blank" rel="noopener">
             <span>${tt('tutorial-link')}</span>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
@@ -853,7 +865,7 @@ async function renderLesson(courseSlug, lessonIdRaw) {
           <div class="lesson-title-row">
             <h1 class="lesson-title">${pickLang(lesson.title)}</h1>
             ${lesson.chapterRef ? `
-              <a class="tutorial-link ripple-surface" href="blog.html#${lesson.chapterRef}" target="_blank" rel="noopener">
+              <a class="tutorial-link ripple-surface" href="${blogTutorialUrl(lesson.chapterRef)}" target="_blank" rel="noopener">
                 <span>${tt('tutorial-link')}</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>

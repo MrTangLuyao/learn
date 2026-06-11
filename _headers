@@ -48,6 +48,7 @@
   Cache-Control: public, max-age=86400
 
 # ─── CORS: the louie. search SDK (louie1.com & the other louie.* sites)
-# reads the course manifest at runtime to index courses ───
-/learn/learn_data/manifest.js
+# reads the course manifest + search broadcast at runtime so courses
+# and every lesson are globally searchable ───
+/learn/learn_data/*
   Access-Control-Allow-Origin: *

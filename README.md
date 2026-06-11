@@ -503,6 +503,7 @@ Monaco 内部渲染自己的滚动条 / overflow-guard 层，有时绕过父容�
 4. 用上面的格式建 `learn/learn_data/sql/lessons/<NN>-<slug>.js`。
 5. 把索引条目追加到 `learn/learn_data/sql/course.js` 的 `course.lessons`。
 6. 如果可见数有变，改 `learn/learn_data/manifest.js` 的 `lessonsCount`。
+7. 跑 `node tools/build-search-broadcast.mjs` 刷新搜索广播（见「搜索广播」一节）。
 
 **SQL 判题规则：**
 
@@ -519,6 +520,7 @@ Monaco 内部渲染自己的滚动条 / overflow-guard 层，有时绕过父容�
 3. 建 `learn/learn_data/python/lessons/<NN>-<slug>.js`。
 4. 把索引条目追加到 `learn/learn_data/python/course.js` 的 `course.lessons`。
 5. 不需要 schema 工作——Python 课时自包含。
+6. 跑 `node tools/build-search-broadcast.mjs` 刷新搜索广播（见「搜索广播」一节）。
 
 **Python 判题规则：**
 
@@ -534,6 +536,7 @@ Monaco 内部渲染自己的滚动条 / overflow-guard 层，有时绕过父容�
 3. 决定 section：基础语法课用 `'main'`，`<header.h>` 课时用 `'stdlib'`；`c-algo` 全部用 `'main'`。
 4. 建 `learn/learn_data/<course-slug>/lessons/<NN>-<slug>.js`（course-slug 是 `c` 还是 `c-algo`）。
 5. 把索引条目追加到对应 `course.lessons`。`manifest.js` 的 `lessonsCount` 也 +1。
+6. 跑 `node tools/build-search-broadcast.mjs` 刷新搜索广播（见「搜索广播」一节）。
 
 **C 判题规则：**
 
@@ -548,8 +551,45 @@ Monaco 内部渲染自己的滚动条 / overflow-guard 层，有时绕过父容�
 2. 建 `learn/learn_data/<slug>/course.js` 并用 `LEARN.course('<slug>', { type: 'sql' | 'python' | 'c', ... })` 注册。
 3. 建 `lessons/`（SQL 还要 `schemas/`）。
 4. 在 `learn/learn_data/manifest.js` 加条目。
+5. 跑 `node tools/build-search-broadcast.mjs` 刷新搜索广播（见「搜索广播」一节）。
 
 新语言类型（如 JavaScript、Rust）需要运行时工作——在 `learn/learn-engines.js` 加 `ensure<Language>()` engine 封装、在 `learn/learn-lesson.js` 加判题路径、在 `learn/learn-views.js` 加 playground。参照 C 课程的结构作为最复杂的运行时门控、最干净的示例。
+
+---
+
+## 搜索广播（louie. search）
+
+全站搜索（louie1.com 的 ⌘K，已接入 home / blog / learn / design）能搜到
+本站的**每一门课和每一节课**。它的数据来源是一个静态"广播"文件：
+
+```
+learn/learn_data/search_broadcast.json
+```
+
+由脚本从 `manifest.js` + 各课程的 `course.js` 课时索引生成（不依赖各课程
+内部架构的差异，只读取所有课程共享的 `lessons` 索引字段）：
+
+```bash
+node tools/build-search-broadcast.mjs
+```
+
+**什么时候要跑：** 任何课程 / 课时 / `manifest.js` 的增删改之后。
+忘了跑也不会坏——搜索引擎会回退到 `manifest.js` 只列课程，但课时
+就搜不到新内容了。
+
+**一劳永逸的做法：** 把 Cloudflare 控制台里的 Deploy command 设成
+
+```bash
+node tools/build-search-broadcast.mjs && npx wrangler deploy
+```
+
+这样每次部署自动重新广播，永远不会忘。
+
+相关配套（改动时注意保持）：
+- `_headers` 里 `/learn/learn_data/*` 的 `Access-Control-Allow-Origin: *`
+  —— 其他 louie.* 站点跨域拉广播文件的前提。
+- 搜索引擎本体在 homepage 仓库：`lib/search/louie-search.js`
+  （文档：homepage 仓库 `search/README.md`）。
 
 ---
 
@@ -1063,6 +1103,7 @@ Monaco internally renders its own scrollbar / overflow-guard layers that sometim
 4. Create `learn/learn_data/sql/lessons/<NN>-<slug>.js` using the format above.
 5. Append the index entry to `course.lessons` in `learn/learn_data/sql/course.js`.
 6. Bump `lessonsCount` in `learn/learn_data/manifest.js` if visible.
+7. Run `node tools/build-search-broadcast.mjs` to refresh the search broadcast (see "Search broadcast" below).
 
 **SQL grader rules:**
 
@@ -1079,6 +1120,7 @@ Monaco internally renders its own scrollbar / overflow-guard layers that sometim
 3. Create `learn/learn_data/python/lessons/<NN>-<slug>.js`.
 4. Append the index entry to `course.lessons` in `learn/learn_data/python/course.js`.
 5. No schema work — Python lessons are self-contained.
+6. Run `node tools/build-search-broadcast.mjs` to refresh the search broadcast (see "Search broadcast" below).
 
 **Python grader rules:**
 
@@ -1094,6 +1136,7 @@ Monaco internally renders its own scrollbar / overflow-guard layers that sometim
 3. Decide the section: `'main'` for syntax, `'stdlib'` for `<header.h>` lessons; `c-algo` uses `'main'` for everything.
 4. Create `learn/learn_data/<course-slug>/lessons/<NN>-<slug>.js` (course-slug is either `c` or `c-algo`).
 5. Append the index entry to `course.lessons` in `learn/learn_data/<course-slug>/course.js`. Bump `lessonsCount` in `learn/learn_data/manifest.js`.
+6. Run `node tools/build-search-broadcast.mjs` to refresh the search broadcast (see "Search broadcast" below).
 
 **C grader rules:**
 
@@ -1108,5 +1151,43 @@ Monaco internally renders its own scrollbar / overflow-guard layers that sometim
 2. Create `learn/learn_data/<slug>/course.js` registering with `LEARN.course('<slug>', { type: 'sql' | 'python' | 'c', ... })`.
 3. Create `lessons/` (and `schemas/` if SQL).
 4. Add an entry to `learn/learn_data/manifest.js`.
+5. Run `node tools/build-search-broadcast.mjs` to refresh the search broadcast (see "Search broadcast" below).
 
 A new language type (e.g., JavaScript, Rust) requires runtime work — adding an `ensure<Language>()` engine wrapper in `learn/learn-engines.js`, a grading path in `learn/learn-lesson.js`, and a playground in `learn/learn-views.js`. Match the C course's structure as the reference: it has the most complex runtime gating and is the cleanest example.
+
+
+## Search broadcast (louie. search)
+
+The site-wide search (the ⌘K overlay from louie1.com, wired into home /
+blog / learn / design) indexes **every course and every lesson** here. Its
+data source is a static "broadcast" file:
+
+```
+learn/learn_data/search_broadcast.json
+```
+
+generated from `manifest.js` + each course's `course.js` lesson index (it
+does not depend on per-course internals — only the `lessons` index shape
+all courses share):
+
+```bash
+node tools/build-search-broadcast.mjs
+```
+
+**When to run it:** after any course / lesson / `manifest.js` change.
+Forgetting is non-fatal — the search engine falls back to `manifest.js`
+and lists courses only, but new lessons won't be searchable.
+
+**Set-and-forget:** point the Cloudflare dashboard Deploy command at
+
+```bash
+node tools/build-search-broadcast.mjs && npx wrangler deploy
+```
+
+so every deploy re-broadcasts automatically.
+
+Related plumbing (keep intact when editing):
+- `Access-Control-Allow-Origin: *` for `/learn/learn_data/*` in `_headers`
+  — required for the other louie.* sites to fetch the broadcast cross-origin.
+- The engine itself lives in the homepage repo: `lib/search/louie-search.js`
+  (docs: `search/README.md` there).

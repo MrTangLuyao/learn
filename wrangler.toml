@@ -6,7 +6,9 @@
 #   - ~9.5 GB total                 (current: ~470 MB, mostly emception mirror)
 #
 # In the Cloudflare Pages dashboard: leave "Build command" empty and set
-# "Deploy command" to `npx wrangler deploy`. This file drives the rest.
+# "Deploy command" to `node tools/build-search-broadcast.mjs && npx wrangler deploy`
+# (the first step regenerates learn_data/search_broadcast.json so the
+# louie. search engine indexes every lesson). This file drives the rest.
 #
 # Custom domain: learn.louie1.com (see ./CNAME for the GitHub Pages mirror).
 

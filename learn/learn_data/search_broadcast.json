@@ -1,0 +1,2241 @@
+{
+ "version": 1,
+ "generated": "2026-06-11",
+ "courses": [
+  {
+   "slug": "sql",
+   "title": {
+    "zh": "SQL 基本语法",
+    "en": "SQL · Core Syntax"
+   },
+   "desc": {
+    "zh": "学习 SQL 的基本查询语句",
+    "en": "Learn the fundamentals of SQL queries"
+   },
+   "level": {
+    "zh": "入门",
+    "en": "Beginner"
+   },
+   "playground": {
+    "title": {
+     "zh": "自定义 SQL 语句",
+     "en": "Custom SQL Playground"
+    }
+   },
+   "lessons": [
+    {
+     "id": 1,
+     "slug": "select-basics",
+     "title": {
+      "zh": "Part 1 · SELECT —— 选哪些列",
+      "en": "Part 1 · SELECT — pick the columns"
+     },
+     "chapter": {
+      "zh": "SQL 语法大全 · Part 1",
+      "en": "SQL syntax guide · Part 1"
+     }
+    },
+    {
+     "id": 2,
+     "slug": "from-tables",
+     "title": {
+      "zh": "Part 2 · FROM —— 从哪张表",
+      "en": "Part 2 · FROM — pick the table"
+     },
+     "chapter": {
+      "zh": "SQL 语法大全 · Part 2",
+      "en": "SQL syntax guide · Part 2"
+     }
+    },
+    {
+     "id": 3,
+     "slug": "where-filter",
+     "title": {
+      "zh": "Part 3 · WHERE —— 筛选行",
+      "en": "Part 3 · WHERE — filter rows"
+     },
+     "chapter": {
+      "zh": "SQL 语法大全 · Part 3",
+      "en": "SQL syntax guide · Part 3"
+     }
+    },
+    {
+     "id": 4,
+     "slug": "comparison-operators",
+     "title": {
+      "zh": "Part 4 · 比较运算符",
+      "en": "Part 4 · Comparison Operators"
+     },
+     "chapter": {
+      "zh": "SQL 语法大全 · Part 4",
+      "en": "SQL syntax guide · Part 4"
+     }
+    },
+    {
+     "id": 5,
+     "slug": "and-or-not",
+     "title": {
+      "zh": "Part 5 · AND / OR / NOT",
+      "en": "Part 5 · AND / OR / NOT"
+     },
+     "chapter": {
+      "zh": "SQL 语法大全 · Part 5",
+      "en": "SQL syntax guide · Part 5"
+     }
+    },
+    {
+     "id": 6,
+     "slug": "in-list",
+     "title": {
+      "zh": "Part 6 · IN / NOT IN",
+      "en": "Part 6 · IN / NOT IN"
+     },
+     "chapter": {
+      "zh": "SQL 语法大全 · Part 6",
+      "en": "SQL syntax guide · Part 6"
+     }
+    },
+    {
+     "id": 7,
+     "slug": "between",
+     "title": {
+      "zh": "Part 7 · BETWEEN —— 范围筛选",
+      "en": "Part 7 · BETWEEN — range filter"
+     },
+     "chapter": {
+      "zh": "SQL 语法大全 · Part 7",
+      "en": "SQL syntax guide · Part 7"
+     }
+    },
+    {
+     "id": 8,
+     "slug": "like-pattern",
+     "title": {
+      "zh": "Part 8 · LIKE —— 字符串模糊匹配",
+      "en": "Part 8 · LIKE — pattern matching"
+     },
+     "chapter": {
+      "zh": "SQL 语法大全 · Part 8",
+      "en": "SQL syntax guide · Part 8"
+     }
+    },
+    {
+     "id": 9,
+     "slug": "is-null",
+     "title": {
+      "zh": "Part 9 · IS NULL —— 空值检查",
+      "en": "Part 9 · IS NULL — null check"
+     },
+     "chapter": {
+      "zh": "SQL 语法大全 · Part 9",
+      "en": "SQL syntax guide · Part 9"
+     }
+    },
+    {
+     "id": 10,
+     "slug": "order-by",
+     "title": {
+      "zh": "Part 10 · ORDER BY —— 排序",
+      "en": "Part 10 · ORDER BY — sorting"
+     },
+     "chapter": {
+      "zh": "SQL 语法大全 · Part 10",
+      "en": "SQL syntax guide · Part 10"
+     }
+    },
+    {
+     "id": 11,
+     "slug": "limit-offset",
+     "title": {
+      "zh": "Part 11 · LIMIT / OFFSET —— 限制行数",
+      "en": "Part 11 · LIMIT / OFFSET — page through rows"
+     },
+     "chapter": {
+      "zh": "SQL 语法大全 · Part 11",
+      "en": "SQL syntax guide · Part 11"
+     }
+    },
+    {
+     "id": 12,
+     "slug": "distinct",
+     "title": {
+      "zh": "Part 12 · DISTINCT —— 去重",
+      "en": "Part 12 · DISTINCT — unique values"
+     },
+     "chapter": {
+      "zh": "SQL 语法大全 · Part 12",
+      "en": "SQL syntax guide · Part 12"
+     }
+    },
+    {
+     "id": 13,
+     "slug": "alias-as",
+     "title": {
+      "zh": "Part 13 · AS —— 起别名",
+      "en": "Part 13 · AS — column aliases"
+     },
+     "chapter": {
+      "zh": "SQL 语法大全 · Part 13",
+      "en": "SQL syntax guide · Part 13"
+     }
+    },
+    {
+     "id": 14,
+     "slug": "inner-join",
+     "title": {
+      "zh": "Part 14 · INNER JOIN —— 内连接",
+      "en": "Part 14 · INNER JOIN"
+     },
+     "chapter": {
+      "zh": "SQL 语法大全 · Part 14",
+      "en": "SQL syntax guide · Part 14"
+     }
+    },
+    {
+     "id": 15,
+     "slug": "left-join",
+     "title": {
+      "zh": "Part 15 · LEFT JOIN —— 左连接",
+      "en": "Part 15 · LEFT JOIN"
+     },
+     "chapter": {
+      "zh": "SQL 语法大全 · Part 15",
+      "en": "SQL syntax guide · Part 15"
+     }
+    },
+    {
+     "id": 16,
+     "slug": "multi-join",
+     "title": {
+      "zh": "Part 16 · 多表连续 JOIN",
+      "en": "Part 16 · Chaining JOINs"
+     },
+     "chapter": {
+      "zh": "SQL 语法大全 · Part 16",
+      "en": "SQL syntax guide · Part 16"
+     }
+    },
+    {
+     "id": 17,
+     "slug": "count",
+     "title": {
+      "zh": "Part 17 · COUNT —— 计数",
+      "en": "Part 17 · COUNT — counting rows"
+     },
+     "chapter": {
+      "zh": "SQL 语法大全 · Part 17",
+      "en": "SQL syntax guide · Part 17"
+     }
+    },
+    {
+     "id": 18,
+     "slug": "sum-avg-max-min",
+     "title": {
+      "zh": "Part 18 · SUM / AVG / MAX / MIN",
+      "en": "Part 18 · SUM / AVG / MAX / MIN"
+     },
+     "chapter": {
+      "zh": "SQL 语法大全 · Part 18",
+      "en": "SQL syntax guide · Part 18"
+     }
+    },
+    {
+     "id": 19,
+     "slug": "group-by",
+     "title": {
+      "zh": "Part 19 · GROUP BY —— 分组聚合",
+      "en": "Part 19 · GROUP BY — group + aggregate"
+     },
+     "chapter": {
+      "zh": "SQL 语法大全 · Part 19",
+      "en": "SQL syntax guide · Part 19"
+     }
+    },
+    {
+     "id": 20,
+     "slug": "having",
+     "title": {
+      "zh": "Part 20 · HAVING —— 分组后筛选",
+      "en": "Part 20 · HAVING — filter after grouping"
+     },
+     "chapter": {
+      "zh": "SQL 语法大全 · Part 20",
+      "en": "SQL syntax guide · Part 20"
+     }
+    },
+    {
+     "id": 21,
+     "slug": "subquery-where",
+     "title": {
+      "zh": "Part 21 · 子查询（WHERE 里）",
+      "en": "Part 21 · Subqueries in WHERE"
+     },
+     "chapter": {
+      "zh": "SQL 语法大全 · Part 21",
+      "en": "SQL syntax guide · Part 21"
+     }
+    },
+    {
+     "id": 22,
+     "slug": "subquery-from",
+     "title": {
+      "zh": "Part 22 · 子查询（FROM 里 —— 派生表）",
+      "en": "Part 22 · Subqueries in FROM (derived tables)"
+     },
+     "chapter": {
+      "zh": "SQL 语法大全 · Part 22",
+      "en": "SQL syntax guide · Part 22"
+     }
+    },
+    {
+     "id": 23,
+     "slug": "exists",
+     "title": {
+      "zh": "Part 23 · EXISTS / NOT EXISTS",
+      "en": "Part 23 · EXISTS / NOT EXISTS"
+     },
+     "chapter": {
+      "zh": "SQL 语法大全 · Part 23",
+      "en": "SQL syntax guide · Part 23"
+     }
+    },
+    {
+     "id": 24,
+     "slug": "coalesce",
+     "title": {
+      "zh": "Part 24 · COALESCE —— 替换 NULL",
+      "en": "Part 24 · COALESCE — replace NULL"
+     },
+     "chapter": {
+      "zh": "SQL 语法大全 · Part 24",
+      "en": "SQL syntax guide · Part 24"
+     }
+    },
+    {
+     "id": 25,
+     "slug": "case-when",
+     "title": {
+      "zh": "Part 25 · CASE WHEN —— SQL 的 if-else",
+      "en": "Part 25 · CASE WHEN — SQL's if-else"
+     },
+     "chapter": {
+      "zh": "SQL 语法大全 · Part 25",
+      "en": "SQL syntax guide · Part 25"
+     }
+    },
+    {
+     "id": 26,
+     "slug": "execution-order",
+     "title": {
+      "zh": "Part 26 · SQL 执行顺序（必背）",
+      "en": "Part 26 · Logical execution order (memorize)"
+     },
+     "chapter": {
+      "zh": "SQL 语法大全 · Part 26",
+      "en": "SQL syntax guide · Part 26"
+     }
+    },
+    {
+     "id": 27,
+     "slug": "practical-find-duplicates",
+     "title": {
+      "zh": "Part 27.1 · 找重复的行",
+      "en": "Part 27.1 · Find duplicate rows"
+     },
+     "chapter": {
+      "zh": "SQL 语法大全 · Part 27.1",
+      "en": "SQL syntax guide · Part 27.1"
+     }
+    },
+    {
+     "id": 28,
+     "slug": "practical-top-n-ties",
+     "title": {
+      "zh": "Part 27.2 · 找前 N 名（带并列）",
+      "en": "Part 27.2 · Top N with ties"
+     },
+     "chapter": {
+      "zh": "SQL 语法大全 · Part 27.2",
+      "en": "SQL syntax guide · Part 27.2"
+     }
+    },
+    {
+     "id": 29,
+     "slug": "practical-per-group-max",
+     "title": {
+      "zh": "Part 27.3 · 每组里取最大那一行",
+      "en": "Part 27.3 · The max row in each group"
+     },
+     "chapter": {
+      "zh": "SQL 语法大全 · Part 27.3",
+      "en": "SQL syntax guide · Part 27.3"
+     }
+    },
+    {
+     "id": 30,
+     "slug": "practical-percentage",
+     "title": {
+      "zh": "Part 27.4 · 算占比 / 累计百分比",
+      "en": "Part 27.4 · Percentage of total"
+     },
+     "chapter": {
+      "zh": "SQL 语法大全 · Part 27.4",
+      "en": "SQL syntax guide · Part 27.4"
+     }
+    },
+    {
+     "id": 31,
+     "slug": "practical-nullif",
+     "title": {
+      "zh": "Part 27.7 · 防止除零（NULLIF）",
+      "en": "Part 27.7 · Avoid division by zero"
+     },
+     "chapter": {
+      "zh": "SQL 语法大全 · Part 27.7",
+      "en": "SQL syntax guide · Part 27.7"
+     }
+    },
+    {
+     "id": 32,
+     "slug": "practical-nth-largest",
+     "title": {
+      "zh": "Part 27.9 · 取第 N 大的值",
+      "en": "Part 27.9 · The N-th largest value"
+     },
+     "chapter": {
+      "zh": "SQL 语法大全 · Part 27.9",
+      "en": "SQL syntax guide · Part 27.9"
+     }
+    },
+    {
+     "id": 33,
+     "slug": "final-copies-per-branch",
+     "title": {
+      "zh": "挑战 1 · 每个分馆的藏书副本数（含 0）",
+      "en": "Challenge 1 · Copies per branch (including zero)"
+     },
+     "chapter": {
+      "zh": "综合挑战 · LEFT JOIN + GROUP BY",
+      "en": "Final challenge · LEFT JOIN + GROUP BY"
+     }
+    },
+    {
+     "id": 34,
+     "slug": "final-active-loan-no-membership",
+     "title": {
+      "zh": "挑战 2 · 在借书但没有有效会员",
+      "en": "Challenge 2 · Active loan, no active membership"
+     },
+     "chapter": {
+      "zh": "综合挑战 · NOT EXISTS / 双重否定",
+      "en": "Final challenge · NOT EXISTS"
+     }
+    },
+    {
+     "id": 35,
+     "slug": "final-genre-fans",
+     "title": {
+      "zh": "挑战 3 · 类型迷（同类型 &gt; 3 本）",
+      "en": "Challenge 3 · Genre fans (> 3 distinct books)"
+     },
+     "chapter": {
+      "zh": "综合挑战 · GROUP BY 多键 + HAVING",
+      "en": "Final challenge · GROUP BY multi-key + HAVING"
+     }
+    },
+    {
+     "id": 36,
+     "slug": "final-top-readers-ties",
+     "title": {
+      "zh": "挑战 4 · 阅读最多作者的前 3 名（含并列）",
+      "en": "Challenge 4 · Top 3 by distinct authors (with ties)"
+     },
+     "chapter": {
+      "zh": "综合挑战 · 含并列的 Top-N",
+      "en": "Final challenge · Top-N with ties"
+     }
+    },
+    {
+     "id": 37,
+     "slug": "final-per-branch-top-genre",
+     "title": {
+      "zh": "挑战 5 · 每个分馆借阅最多的类型",
+      "en": "Challenge 5 · Top-loaned genre per branch"
+     },
+     "chapter": {
+      "zh": "综合挑战 · 分组内最大值 + 含 0 + 并列",
+      "en": "Final challenge · per-group max + zeros + ties"
+     }
+    },
+    {
+     "id": 38,
+     "slug": "final-review-every-borrowed",
+     "title": {
+      "zh": "挑战 6 · 每借必评的读者",
+      "en": "Challenge 6 · Reviewed every book borrowed"
+     },
+     "chapter": {
+      "zh": "综合挑战 · 全称量词（双重否定）",
+      "en": "Final challenge · universal quantifier"
+     }
+    },
+    {
+     "id": 39,
+     "slug": "final-avg-fine-per-loan",
+     "title": {
+      "zh": "挑战 7 · 每位会员每笔借阅的平均罚金",
+      "en": "Challenge 7 · Average fine per loan, per member"
+     },
+     "chapter": {
+      "zh": "综合挑战 · LEFT JOIN + COALESCE + CASE 防除零",
+      "en": "Final challenge · LEFT JOIN + COALESCE + safe division"
+     }
+    },
+    {
+     "id": 40,
+     "slug": "final-popular-and-rated",
+     "title": {
+      "zh": "挑战 8 · 既受欢迎又口碑好的书",
+      "en": "Challenge 8 · Popular AND well-rated books"
+     },
+     "chapter": {
+      "zh": "综合挑战 · 标量子查询并列条件",
+      "en": "Final challenge · parallel scalar subqueries"
+     }
+    },
+    {
+     "id": 41,
+     "slug": "final-per-member-top-genre",
+     "title": {
+      "zh": "挑战 9 · 每位会员最常借阅的类型",
+      "en": "Challenge 9 · Each member's favourite genre"
+     },
+     "chapter": {
+      "zh": "综合挑战 · 分组内最大值 + 并列",
+      "en": "Final challenge · per-group max + ties"
+     }
+    },
+    {
+     "id": 42,
+     "slug": "final-global-authors",
+     "title": {
+      "zh": "挑战 10 · 国际化的作者",
+      "en": "Challenge 10 · Authors with global reach"
+     },
+     "chapter": {
+      "zh": "综合挑战 · 跨 5 张表 + COUNT(DISTINCT)",
+      "en": "Final challenge · 5-table chain + COUNT(DISTINCT)"
+     }
+    }
+   ]
+  },
+  {
+   "slug": "python",
+   "title": {
+    "zh": "Python 基础语法",
+    "en": "Python · Core Syntax"
+   },
+   "desc": {
+    "zh": "早期测试，可能包含大量未知错误。左侧课程内容可能不完善。",
+    "en": "Early access. May contain many unknown bugs. Course content on the left may be incomplete."
+   },
+   "level": {
+    "zh": "入门",
+    "en": "Beginner"
+   },
+   "playground": {
+    "title": {
+     "zh": "自定义 Python 代码",
+     "en": "Python Playground"
+    }
+   },
+   "lessons": [
+    {
+     "id": 1,
+     "slug": "hello-python",
+     "title": {
+      "zh": "你好，Python！",
+      "en": "Hello, Python!"
+     },
+     "chapter": {
+      "zh": "Part 1 · print 与 input",
+      "en": "Part 1 · print & input"
+     }
+    },
+    {
+     "id": 2,
+     "slug": "multiple-values-sep-end",
+     "title": {
+      "zh": "多值输出与 sep / end",
+      "en": "Multiple Values & sep / end"
+     },
+     "chapter": {
+      "zh": "Part 1 · print 与 input",
+      "en": "Part 1 · print & input"
+     }
+    },
+    {
+     "id": 3,
+     "slug": "reading-user-input",
+     "title": {
+      "zh": "读取用户输入",
+      "en": "Reading User Input"
+     },
+     "chapter": {
+      "zh": "Part 1 · print 与 input",
+      "en": "Part 1 · print & input"
+     }
+    },
+    {
+     "id": 4,
+     "slug": "arithmetic-operators",
+     "title": {
+      "zh": "算术运算符",
+      "en": "Arithmetic Operators"
+     },
+     "chapter": {
+      "zh": "Part 2 · 数值运算",
+      "en": "Part 2 · Numeric Ops"
+     }
+    },
+    {
+     "id": 5,
+     "slug": "variables-expressions",
+     "title": {
+      "zh": "变量与表达式",
+      "en": "Variables & Expressions"
+     },
+     "chapter": {
+      "zh": "Part 2 · 数值运算",
+      "en": "Part 2 · Numeric Ops"
+     }
+    },
+    {
+     "id": 6,
+     "slug": "string-to-number",
+     "title": {
+      "zh": "字符串转数字",
+      "en": "String to Number"
+     },
+     "chapter": {
+      "zh": "Part 3 · 类型转换",
+      "en": "Part 3 · Type Conversion"
+     }
+    },
+    {
+     "id": 7,
+     "slug": "number-to-string",
+     "title": {
+      "zh": "数字转字符串",
+      "en": "Number to String"
+     },
+     "chapter": {
+      "zh": "Part 3 · 类型转换",
+      "en": "Part 3 · Type Conversion"
+     }
+    },
+    {
+     "id": 8,
+     "slug": "floor-division",
+     "title": {
+      "zh": "整除",
+      "en": "Floor Division"
+     },
+     "chapter": {
+      "zh": "Part 4 · 整除与取余",
+      "en": "Part 4 · Floor Division & Modulo"
+     }
+    },
+    {
+     "id": 9,
+     "slug": "modulo-time-conversion",
+     "title": {
+      "zh": "取余 % 与时间换算",
+      "en": "Modulo % & Time Conversion"
+     },
+     "chapter": {
+      "zh": "Part 4 · 整除与取余",
+      "en": "Part 4 · Floor Division & Modulo"
+     }
+    },
+    {
+     "id": 10,
+     "slug": "string-indexing",
+     "title": {
+      "zh": "字符串索引",
+      "en": "String Indexing"
+     },
+     "chapter": {
+      "zh": "Part 5 · 字符串索引与切片",
+      "en": "Part 5 · String Indexing & Slicing"
+     }
+    },
+    {
+     "id": 11,
+     "slug": "string-slicing",
+     "title": {
+      "zh": "字符串切片",
+      "en": "String Slicing"
+     },
+     "chapter": {
+      "zh": "Part 5 · 字符串索引与切片",
+      "en": "Part 5 · String Indexing & Slicing"
+     }
+    },
+    {
+     "id": 12,
+     "slug": "case-strip",
+     "title": {
+      "zh": "大小写与去空白",
+      "en": "Case & Strip"
+     },
+     "chapter": {
+      "zh": "Part 6 · 字符串方法",
+      "en": "Part 6 · String Methods"
+     }
+    },
+    {
+     "id": 13,
+     "slug": "split-join",
+     "title": {
+      "zh": "split() 与 join()",
+      "en": "split() & join()"
+     },
+     "chapter": {
+      "zh": "Part 6 · 字符串方法",
+      "en": "Part 6 · String Methods"
+     }
+    },
+    {
+     "id": 14,
+     "slug": "f-string-basics",
+     "title": {
+      "zh": "f-string 基础",
+      "en": "f-string Basics"
+     },
+     "chapter": {
+      "zh": "Part 7 · f-string 格式化",
+      "en": "Part 7 · f-string Formatting"
+     }
+    },
+    {
+     "id": 15,
+     "slug": "f-string-format-specs",
+     "title": {
+      "zh": "f-string 格式规范",
+      "en": "f-string Format Specs"
+     },
+     "chapter": {
+      "zh": "Part 7 · f-string 格式化",
+      "en": "Part 7 · f-string Formatting"
+     }
+    },
+    {
+     "id": 16,
+     "slug": "list-basics",
+     "title": {
+      "zh": "列表基础",
+      "en": "List Basics"
+     },
+     "chapter": {
+      "zh": "Part 8 · 列表与元组",
+      "en": "Part 8 · Lists & Tuples"
+     }
+    },
+    {
+     "id": 17,
+     "slug": "list-mutation-append",
+     "title": {
+      "zh": "列表修改与 append()",
+      "en": "List Mutation & append()"
+     },
+     "chapter": {
+      "zh": "Part 8 · 列表与元组",
+      "en": "Part 8 · Lists & Tuples"
+     }
+    },
+    {
+     "id": 18,
+     "slug": "tuples",
+     "title": {
+      "zh": "元组 tuple",
+      "en": "Tuples"
+     },
+     "chapter": {
+      "zh": "Part 8 · 列表与元组",
+      "en": "Part 8 · Lists & Tuples"
+     }
+    },
+    {
+     "id": 19,
+     "slug": "conditionals-1",
+     "title": {
+      "zh": "条件判断 1",
+      "en": "Conditionals 1"
+     },
+     "chapter": {
+      "zh": "Part 9 · 条件语句",
+      "en": "Part 9 · Conditionals"
+     }
+    },
+    {
+     "id": 20,
+     "slug": "conditionals-2",
+     "title": {
+      "zh": "条件判断 2",
+      "en": "Conditionals 2"
+     },
+     "chapter": {
+      "zh": "Part 9 · 条件语句",
+      "en": "Part 9 · Conditionals"
+     }
+    },
+    {
+     "id": 21,
+     "slug": "and-or-in",
+     "title": {
+      "zh": "and、or 和 in",
+      "en": "and, or & in"
+     },
+     "chapter": {
+      "zh": "Part 9 · 条件语句",
+      "en": "Part 9 · Conditionals"
+     }
+    },
+    {
+     "id": 22,
+     "slug": "chained-comparisons-not-in",
+     "title": {
+      "zh": "链式比较与 not in",
+      "en": "Chained Comparisons & not in"
+     },
+     "chapter": {
+      "zh": "Part 10 · 比较与成员运算符",
+      "en": "Part 10 · Comparisons & Membership"
+     }
+    },
+    {
+     "id": 23,
+     "slug": "def-return",
+     "title": {
+      "zh": "def 与 return",
+      "en": "def & return"
+     },
+     "chapter": {
+      "zh": "Part 11 · 函数定义",
+      "en": "Part 11 · Functions"
+     }
+    },
+    {
+     "id": 24,
+     "slug": "default-parameters",
+     "title": {
+      "zh": "默认参数",
+      "en": "Default Parameters"
+     },
+     "chapter": {
+      "zh": "Part 11 · 函数定义",
+      "en": "Part 11 · Functions"
+     }
+    },
+    {
+     "id": 25,
+     "slug": "boolean-return-values",
+     "title": {
+      "zh": "布尔返回值",
+      "en": "Boolean Return Values"
+     },
+     "chapter": {
+      "zh": "Part 11 · 函数定义",
+      "en": "Part 11 · Functions"
+     }
+    },
+    {
+     "id": 26,
+     "slug": "while-basics",
+     "title": {
+      "zh": "while 基础",
+      "en": "while Basics"
+     },
+     "chapter": {
+      "zh": "Part 12 · while 循环",
+      "en": "Part 12 · while Loop"
+     }
+    },
+    {
+     "id": 27,
+     "slug": "while-accumulator",
+     "title": {
+      "zh": "while 累加器",
+      "en": "while Accumulator"
+     },
+     "chapter": {
+      "zh": "Part 12 · while 循环",
+      "en": "Part 12 · while Loop"
+     }
+    },
+    {
+     "id": 28,
+     "slug": "for-range",
+     "title": {
+      "zh": "for 与 range()",
+      "en": "for & range()"
+     },
+     "chapter": {
+      "zh": "Part 13 · for 循环与 range()",
+      "en": "Part 13 · for Loop & range()"
+     }
+    },
+    {
+     "id": 29,
+     "slug": "for-over-a-list-accumulate",
+     "title": {
+      "zh": "for 遍历列表，累加",
+      "en": "for Over a List, Accumulate"
+     },
+     "chapter": {
+      "zh": "Part 13 · for 循环与 range()",
+      "en": "Part 13 · for Loop & range()"
+     }
+    },
+    {
+     "id": 30,
+     "slug": "nested-loops-star-pattern",
+     "title": {
+      "zh": "嵌套循环与星形图案",
+      "en": "Nested Loops & Star Pattern"
+     },
+     "chapter": {
+      "zh": "Part 14 · 嵌套循环",
+      "en": "Part 14 · Nested Loops"
+     }
+    },
+    {
+     "id": 31,
+     "slug": "nested-loop-accumulation",
+     "title": {
+      "zh": "嵌套循环累加",
+      "en": "Nested Loop Accumulation"
+     },
+     "chapter": {
+      "zh": "Part 14 · 嵌套循环",
+      "en": "Part 14 · Nested Loops"
+     }
+    },
+    {
+     "id": 32,
+     "slug": "dict-basics-create-lookup",
+     "title": {
+      "zh": "字典基础：创建与查找",
+      "en": "Dict Basics: Create & Lookup"
+     },
+     "chapter": {
+      "zh": "Part 15 · 字典 dict",
+      "en": "Part 15 · Dictionaries"
+     }
+    },
+    {
+     "id": 33,
+     "slug": "dict-modification-iteration",
+     "title": {
+      "zh": "字典修改与遍历",
+      "en": "Dict Modification & Iteration"
+     },
+     "chapter": {
+      "zh": "Part 15 · 字典 dict",
+      "en": "Part 15 · Dictionaries"
+     }
+    },
+    {
+     "id": 34,
+     "slug": "dict-word-frequency",
+     "title": {
+      "zh": "字典统计词频",
+      "en": "Dict Word Frequency"
+     },
+     "chapter": {
+      "zh": "Part 15 · 字典 dict",
+      "en": "Part 15 · Dictionaries"
+     }
+    },
+    {
+     "id": 35,
+     "slug": "set-deduplication-membership",
+     "title": {
+      "zh": "集合去重与成员检查",
+      "en": "Set Deduplication & Membership"
+     },
+     "chapter": {
+      "zh": "Part 16 · 集合 set",
+      "en": "Part 16 · Sets"
+     }
+    },
+    {
+     "id": 36,
+     "slug": "set-operations",
+     "title": {
+      "zh": "集合运算",
+      "en": "Set Operations"
+     },
+     "chapter": {
+      "zh": "Part 16 · 集合 set",
+      "en": "Part 16 · Sets"
+     }
+    },
+    {
+     "id": 37,
+     "slug": "alias-trap-copy",
+     "title": {
+      "zh": "别名陷阱与 copy()",
+      "en": "Alias Trap & copy()"
+     },
+     "chapter": {
+      "zh": "Part 17 · 列表可变性与复制",
+      "en": "Part 17 · List Mutability & Copying"
+     }
+    },
+    {
+     "id": 38,
+     "slug": "enumerate-index-value-together",
+     "title": {
+      "zh": "enumerate() 同时取索引和值",
+      "en": "enumerate(): Index & Value Together"
+     },
+     "chapter": {
+      "zh": "Part 18 · 高级列表操作",
+      "en": "Part 18 · Advanced List Ops"
+     }
+    },
+    {
+     "id": 39,
+     "slug": "sorted-with-a-key",
+     "title": {
+      "zh": "sorted() 与 key 参数",
+      "en": "sorted() with a key"
+     },
+     "chapter": {
+      "zh": "Part 18 · 高级列表操作",
+      "en": "Part 18 · Advanced List Ops"
+     }
+    },
+    {
+     "id": 40,
+     "slug": "lambda-as-a-sort-key",
+     "title": {
+      "zh": "lambda 作为排序键",
+      "en": "lambda as a Sort Key"
+     },
+     "chapter": {
+      "zh": "Part 18 · 高级列表操作",
+      "en": "Part 18 · Advanced List Ops"
+     }
+    },
+    {
+     "id": 41,
+     "slug": "none-return-multiple-return-values",
+     "title": {
+      "zh": "None 返回值与多返回值",
+      "en": "None Return & Multiple Return Values"
+     },
+     "chapter": {
+      "zh": "Part 19 · 高级函数",
+      "en": "Part 19 · Advanced Functions"
+     }
+    },
+    {
+     "id": 42,
+     "slug": "early-return",
+     "title": {
+      "zh": "提前返回",
+      "en": "Early Return"
+     },
+     "chapter": {
+      "zh": "Part 19 · 高级函数",
+      "en": "Part 19 · Advanced Functions"
+     }
+    },
+    {
+     "id": 43,
+     "slug": "list-comprehension-basics",
+     "title": {
+      "zh": "列表推导式基础",
+      "en": "List Comprehension Basics"
+     },
+     "chapter": {
+      "zh": "Part 20 · 列表推导式",
+      "en": "Part 20 · List Comprehensions"
+     }
+    },
+    {
+     "id": 44,
+     "slug": "comprehension-with-filter",
+     "title": {
+      "zh": "带条件过滤的推导式",
+      "en": "Comprehension with Filter"
+     },
+     "chapter": {
+      "zh": "Part 20 · 列表推导式",
+      "en": "Part 20 · List Comprehensions"
+     }
+    },
+    {
+     "id": 45,
+     "slug": "comprehension-on-strings",
+     "title": {
+      "zh": "推导式处理字符串",
+      "en": "Comprehension on Strings"
+     },
+     "chapter": {
+      "zh": "Part 20 · 列表推导式",
+      "en": "Part 20 · List Comprehensions"
+     }
+    },
+    {
+     "id": 46,
+     "slug": "the-math-module",
+     "title": {
+      "zh": "math 模块",
+      "en": "The math Module"
+     },
+     "chapter": {
+      "zh": "Part 21 · 常用标准库",
+      "en": "Part 21 · Standard Library"
+     }
+    },
+    {
+     "id": 47,
+     "slug": "the-random-module",
+     "title": {
+      "zh": "random 模块",
+      "en": "The random Module"
+     },
+     "chapter": {
+      "zh": "Part 21 · 常用标准库",
+      "en": "Part 21 · Standard Library"
+     }
+    },
+    {
+     "id": 48,
+     "slug": "line-by-line-text-processing",
+     "title": {
+      "zh": "逐行处理文本（字符串模拟）",
+      "en": "Line-by-Line Text Processing"
+     },
+     "chapter": {
+      "zh": "Part 22 · 文件读写",
+      "en": "Part 22 · File I/O"
+     }
+    },
+    {
+     "id": 49,
+     "slug": "parsing-a-csv-string",
+     "title": {
+      "zh": "解析 CSV 字符串",
+      "en": "Parsing a CSV String"
+     },
+     "chapter": {
+      "zh": "Part 23 · CSV 文件处理",
+      "en": "Part 23 · CSV Processing"
+     }
+    },
+    {
+     "id": 50,
+     "slug": "try-and-except",
+     "title": {
+      "zh": "try 和 except",
+      "en": "try and except"
+     },
+     "chapter": {
+      "zh": "Part 24 · 异常处理",
+      "en": "Part 24 · Exception Handling"
+     }
+    },
+    {
+     "id": 51,
+     "slug": "multiple-except-clauses",
+     "title": {
+      "zh": "捕获多种异常",
+      "en": "Multiple except Clauses"
+     },
+     "chapter": {
+      "zh": "Part 24 · 异常处理",
+      "en": "Part 24 · Exception Handling"
+     }
+    },
+    {
+     "id": 52,
+     "slug": "raise-throwing-exceptions",
+     "title": {
+      "zh": "raise 主动抛出异常",
+      "en": "raise: Throwing Exceptions"
+     },
+     "chapter": {
+      "zh": "Part 24 · 异常处理",
+      "en": "Part 24 · Exception Handling"
+     }
+    },
+    {
+     "id": 53,
+     "slug": "recursion-factorial",
+     "title": {
+      "zh": "递归：阶乘",
+      "en": "Recursion: Factorial"
+     },
+     "chapter": {
+      "zh": "Part 25 · 递归",
+      "en": "Part 25 · Recursion"
+     }
+    },
+    {
+     "id": 54,
+     "slug": "recursion-fibonacci",
+     "title": {
+      "zh": "递归：斐波那契数列",
+      "en": "Recursion: Fibonacci"
+     },
+     "chapter": {
+      "zh": "Part 25 · 递归",
+      "en": "Part 25 · Recursion"
+     }
+    },
+    {
+     "id": 55,
+     "slug": "recursion-list-max",
+     "title": {
+      "zh": "递归：列表求最大值",
+      "en": "Recursion: List Max"
+     },
+     "chapter": {
+      "zh": "Part 25 · 递归",
+      "en": "Part 25 · Recursion"
+     }
+    },
+    {
+     "id": 56,
+     "slug": "find-fix-the-bug",
+     "title": {
+      "zh": "找出并修复 Bug",
+      "en": "Find & Fix the Bug"
+     },
+     "chapter": {
+      "zh": "Part 26 · 调试技巧",
+      "en": "Part 26 · Debugging"
+     }
+    },
+    {
+     "id": 57,
+     "slug": "zip-parallel-iteration-unpacking",
+     "title": {
+      "zh": "zip() 并行遍历与解包",
+      "en": "zip() Parallel Iteration & Unpacking"
+     },
+     "chapter": {
+      "zh": "Part 27 · 实用技巧",
+      "en": "Part 27 · Practical Tips"
+     }
+    },
+    {
+     "id": 58,
+     "slug": "any-and-all",
+     "title": {
+      "zh": "any() 与 all()",
+      "en": "any() and all()"
+     },
+     "chapter": {
+      "zh": "Part 27 · 实用技巧",
+      "en": "Part 27 · Practical Tips"
+     }
+    },
+    {
+     "id": 59,
+     "slug": "caesar-cipher-encrypt-decrypt",
+     "title": {
+      "zh": "凯撒密码：加密与解密",
+      "en": "Caesar Cipher: Encrypt & Decrypt"
+     },
+     "chapter": {
+      "zh": "综合挑战",
+      "en": "Comprehensive Challenges"
+     }
+    },
+    {
+     "id": 60,
+     "slug": "matrix-multiplication",
+     "title": {
+      "zh": "矩阵乘法",
+      "en": "Matrix Multiplication"
+     },
+     "chapter": {
+      "zh": "综合挑战",
+      "en": "Comprehensive Challenges"
+     }
+    },
+    {
+     "id": 61,
+     "slug": "merge-sort",
+     "title": {
+      "zh": "归并排序",
+      "en": "Merge Sort"
+     },
+     "chapter": {
+      "zh": "综合挑战",
+      "en": "Comprehensive Challenges"
+     }
+    },
+    {
+     "id": 62,
+     "slug": "binary-search-exception-handling",
+     "title": {
+      "zh": "二分查找 + 异常处理",
+      "en": "Binary Search + Exception Handling"
+     },
+     "chapter": {
+      "zh": "综合挑战",
+      "en": "Comprehensive Challenges"
+     }
+    },
+    {
+     "id": 63,
+     "slug": "anagrams",
+     "title": {
+      "zh": "字谜",
+      "en": "Anagrams"
+     },
+     "chapter": {
+      "zh": "综合挑战",
+      "en": "Comprehensive Challenges"
+     }
+    },
+    {
+     "id": 64,
+     "slug": "sudoku-validator",
+     "title": {
+      "zh": "Sudoku 验证器",
+      "en": "Sudoku Validator"
+     },
+     "chapter": {
+      "zh": "Boss关",
+      "en": "Boss Level"
+     }
+    },
+    {
+     "id": 65,
+     "slug": "library-management-system",
+     "title": {
+      "zh": "图书馆管理系统",
+      "en": "Library Management System"
+     },
+     "chapter": {
+      "zh": "Boss关",
+      "en": "Boss Level"
+     }
+    },
+    {
+     "id": 66,
+     "slug": "vigenere-cipher-frequency-analysis",
+     "title": {
+      "zh": "维吉尼亚密码 + 频率分析",
+      "en": "Vigenere Cipher + Frequency Analysis"
+     },
+     "chapter": {
+      "zh": "Boss关",
+      "en": "Boss Level"
+     }
+    },
+    {
+     "id": 67,
+     "slug": "student-records-manager",
+     "title": {
+      "zh": "学生档案管理系统",
+      "en": "Student Records Manager"
+     },
+     "chapter": {
+      "zh": "Boss关",
+      "en": "Boss Level"
+     }
+    },
+    {
+     "id": 68,
+     "slug": "sales-data",
+     "title": {
+      "zh": "销售数据",
+      "en": "Sales Data"
+     },
+     "chapter": {
+      "zh": "Boss关",
+      "en": "Boss Level"
+     }
+    }
+   ]
+  },
+  {
+   "slug": "c",
+   "title": {
+    "zh": "C 语言基础语法 (Beta)",
+    "en": "C · Core Syntax (Beta)"
+   },
+   "desc": {
+    "zh": "早期测试，可能包含错误。",
+    "en": "Early access. May contain bugs."
+   },
+   "level": {
+    "zh": "入门",
+    "en": "Beginner"
+   },
+   "playground": {
+    "title": {
+     "zh": "自定义 C 代码",
+     "en": "C Playground"
+    }
+   },
+   "lessons": [
+    {
+     "id": 1,
+     "slug": "hello-c",
+     "title": {
+      "zh": "程序结构",
+      "en": "Program structure"
+     },
+     "chapter": {
+      "zh": "printf,return",
+      "en": "printf,return"
+     }
+    },
+    {
+     "id": 2,
+     "slug": "escapes",
+     "title": {
+      "zh": "转义符",
+      "en": "Escape sequences"
+     },
+     "chapter": {
+      "zh": "\\n,\\t,\\\\",
+      "en": "\\n,\\t,\\\\"
+     }
+    },
+    {
+     "id": 3,
+     "slug": "variables",
+     "title": {
+      "zh": "变量与基本类型",
+      "en": "Variables & types"
+     },
+     "chapter": {
+      "zh": "int,float,char",
+      "en": "int,float,char"
+     }
+    },
+    {
+     "id": 4,
+     "slug": "constants",
+     "title": {
+      "zh": "常量",
+      "en": "Constants"
+     },
+     "chapter": {
+      "zh": "#define,const",
+      "en": "#define,const"
+     }
+    },
+    {
+     "id": 5,
+     "slug": "arithmetic",
+     "title": {
+      "zh": "算术运算符",
+      "en": "Arithmetic operators"
+     },
+     "chapter": {
+      "zh": "+,-,*,/,%",
+      "en": "+,-,*,/,%"
+     }
+    },
+    {
+     "id": 6,
+     "slug": "comparison-logic",
+     "title": {
+      "zh": "关系与逻辑运算",
+      "en": "Relational & logical"
+     },
+     "chapter": {
+      "zh": "==,!=,&amp;&amp;,||",
+      "en": "==,!=,&amp;&amp;,||"
+     }
+    },
+    {
+     "id": 7,
+     "slug": "if-else",
+     "title": {
+      "zh": "if 判断",
+      "en": "if statement"
+     },
+     "chapter": {
+      "zh": "if,else",
+      "en": "if,else"
+     }
+    },
+    {
+     "id": 8,
+     "slug": "switch",
+     "title": {
+      "zh": "switch",
+      "en": "switch"
+     },
+     "chapter": {
+      "zh": "switch,case,break",
+      "en": "switch,case,break"
+     }
+    },
+    {
+     "id": 9,
+     "slug": "while",
+     "title": {
+      "zh": "while 循环",
+      "en": "while loop"
+     },
+     "chapter": {
+      "zh": "while",
+      "en": "while"
+     }
+    },
+    {
+     "id": 10,
+     "slug": "for",
+     "title": {
+      "zh": "for 循环",
+      "en": "for loop"
+     },
+     "chapter": {
+      "zh": "for",
+      "en": "for"
+     }
+    },
+    {
+     "id": 11,
+     "slug": "functions",
+     "title": {
+      "zh": "函数",
+      "en": "Functions"
+     },
+     "chapter": {
+      "zh": "Functions",
+      "en": "Functions"
+     }
+    },
+    {
+     "id": 12,
+     "slug": "pass-by-value",
+     "title": {
+      "zh": "值传递",
+      "en": "Pass-by-value"
+     },
+     "chapter": {
+      "zh": "Pass-by-value",
+      "en": "Pass-by-value"
+     }
+    },
+    {
+     "id": 13,
+     "slug": "scope",
+     "title": {
+      "zh": "作用域",
+      "en": "Scope"
+     },
+     "chapter": {
+      "zh": "static",
+      "en": "static"
+     }
+    },
+    {
+     "id": 14,
+     "slug": "arrays",
+     "title": {
+      "zh": "数组",
+      "en": "Arrays"
+     },
+     "chapter": {
+      "zh": "Arrays",
+      "en": "Arrays"
+     }
+    },
+    {
+     "id": 15,
+     "slug": "multi-arrays",
+     "title": {
+      "zh": "二维数组",
+      "en": "2D arrays"
+     },
+     "chapter": {
+      "zh": "2D arrays",
+      "en": "2D arrays"
+     }
+    },
+    {
+     "id": 16,
+     "slug": "arrays-and-functions",
+     "title": {
+      "zh": "数组与函数",
+      "en": "Arrays & functions"
+     },
+     "chapter": {
+      "zh": "Arrays &amp; functions",
+      "en": "Arrays &amp; functions"
+     }
+    },
+    {
+     "id": 17,
+     "slug": "pointers",
+     "title": {
+      "zh": "指针",
+      "en": "Pointers"
+     },
+     "chapter": {
+      "zh": "&amp;,*",
+      "en": "&amp;,*"
+     }
+    },
+    {
+     "id": 18,
+     "slug": "pointer-arithmetic",
+     "title": {
+      "zh": "指针运算",
+      "en": "Pointer arithmetic"
+     },
+     "chapter": {
+      "zh": "Pointer arithmetic",
+      "en": "Pointer arithmetic"
+     }
+    },
+    {
+     "id": 19,
+     "slug": "pointers-and-arrays",
+     "title": {
+      "zh": "指针与数组",
+      "en": "Pointers & arrays"
+     },
+     "chapter": {
+      "zh": "Pointers &amp; arrays",
+      "en": "Pointers &amp; arrays"
+     }
+    },
+    {
+     "id": 20,
+     "slug": "strings",
+     "title": {
+      "zh": "字符串",
+      "en": "Strings"
+     },
+     "chapter": {
+      "zh": "char[],\\0",
+      "en": "char[],\\0"
+     }
+    },
+    {
+     "id": 21,
+     "slug": "string-functions",
+     "title": {
+      "zh": "字符串函数",
+      "en": "String functions"
+     },
+     "chapter": {
+      "zh": "strlen,strcpy,strcat",
+      "en": "strlen,strcpy,strcat"
+     }
+    },
+    {
+     "id": 22,
+     "slug": "structs",
+     "title": {
+      "zh": "结构体",
+      "en": "Structs"
+     },
+     "chapter": {
+      "zh": "struct",
+      "en": "struct"
+     }
+    },
+    {
+     "id": 23,
+     "slug": "struct-pointers",
+     "title": {
+      "zh": "结构体指针",
+      "en": "Struct pointers"
+     },
+     "chapter": {
+      "zh": "-&gt;",
+      "en": "-&gt;"
+     }
+    },
+    {
+     "id": 24,
+     "slug": "structs-and-functions",
+     "title": {
+      "zh": "结构体与函数",
+      "en": "Structs & functions"
+     },
+     "chapter": {
+      "zh": "Structs &amp; functions",
+      "en": "Structs &amp; functions"
+     }
+    },
+    {
+     "id": 25,
+     "slug": "unions",
+     "title": {
+      "zh": "共用体",
+      "en": "Unions"
+     },
+     "chapter": {
+      "zh": "union",
+      "en": "union"
+     }
+    },
+    {
+     "id": 26,
+     "slug": "enums",
+     "title": {
+      "zh": "枚举",
+      "en": "Enums"
+     },
+     "chapter": {
+      "zh": "enum",
+      "en": "enum"
+     }
+    },
+    {
+     "id": 27,
+     "slug": "typedef",
+     "title": {
+      "zh": "typedef",
+      "en": "typedef"
+     },
+     "chapter": {
+      "zh": "typedef",
+      "en": "typedef"
+     }
+    },
+    {
+     "id": 28,
+     "slug": "scanf-details",
+     "title": {
+      "zh": "交互输入：问个名字",
+      "en": "Interactive input: ask a name"
+     },
+     "chapter": {
+      "zh": "scanf,printf",
+      "en": "scanf,printf"
+     }
+    },
+    {
+     "id": 29,
+     "slug": "string-as-file",
+     "title": {
+      "zh": "文件读写",
+      "en": "File I/O"
+     },
+     "chapter": {
+      "zh": "fopen,fread,fclose",
+      "en": "fopen,fread,fclose"
+     }
+    },
+    {
+     "id": 30,
+     "slug": "malloc-free",
+     "title": {
+      "zh": "动态内存",
+      "en": "Dynamic memory"
+     },
+     "chapter": {
+      "zh": "malloc,free",
+      "en": "malloc,free"
+     }
+    },
+    {
+     "id": 31,
+     "slug": "printf-format",
+     "title": {
+      "zh": "学习C标准库：&lt;stdio.h&gt;",
+      "en": "Learn C stdlib: &lt;stdio.h&gt;"
+     },
+     "chapter": {
+      "zh": "printf",
+      "en": "printf"
+     }
+    },
+    {
+     "id": 32,
+     "slug": "strchr-strstr",
+     "title": {
+      "zh": "学习C标准库：&lt;string.h&gt;",
+      "en": "Learn C stdlib: &lt;string.h&gt;"
+     },
+     "chapter": {
+      "zh": "strchr,strstr,strrchr",
+      "en": "strchr,strstr,strrchr"
+     }
+    },
+    {
+     "id": 33,
+     "slug": "strn-family",
+     "title": {
+      "zh": "学习C标准库：&lt;string.h&gt; 2",
+      "en": "Learn C stdlib: &lt;string.h&gt; 2"
+     },
+     "chapter": {
+      "zh": "strncpy,strncmp,strncat",
+      "en": "strncpy,strncmp,strncat"
+     }
+    },
+    {
+     "id": 34,
+     "slug": "strtok",
+     "title": {
+      "zh": "学习C标准库：&lt;string.h&gt; 3",
+      "en": "Learn C stdlib: &lt;string.h&gt; 3"
+     },
+     "chapter": {
+      "zh": "strtok",
+      "en": "strtok"
+     }
+    },
+    {
+     "id": 35,
+     "slug": "mem-functions",
+     "title": {
+      "zh": "学习C标准库：&lt;string.h&gt; 4",
+      "en": "Learn C stdlib: &lt;string.h&gt; 4"
+     },
+     "chapter": {
+      "zh": "memcpy,memset,memcmp",
+      "en": "memcpy,memset,memcmp"
+     }
+    },
+    {
+     "id": 36,
+     "slug": "atoi-strtol",
+     "title": {
+      "zh": "学习C标准库：&lt;stdlib.h&gt;",
+      "en": "Learn C stdlib: &lt;stdlib.h&gt;"
+     },
+     "chapter": {
+      "zh": "atoi,strtol",
+      "en": "atoi,strtol"
+     }
+    },
+    {
+     "id": 37,
+     "slug": "rand-srand",
+     "title": {
+      "zh": "学习C标准库：&lt;stdlib.h&gt; 2",
+      "en": "Learn C stdlib: &lt;stdlib.h&gt; 2"
+     },
+     "chapter": {
+      "zh": "rand,srand",
+      "en": "rand,srand"
+     }
+    },
+    {
+     "id": 38,
+     "slug": "qsort",
+     "title": {
+      "zh": "学习C标准库：&lt;stdlib.h&gt; 3",
+      "en": "Learn C stdlib: &lt;stdlib.h&gt; 3"
+     },
+     "chapter": {
+      "zh": "qsort",
+      "en": "qsort"
+     }
+    },
+    {
+     "id": 39,
+     "slug": "sqrt-pow-fabs",
+     "title": {
+      "zh": "学习C标准库：&lt;math.h&gt;",
+      "en": "Learn C stdlib: &lt;math.h&gt;"
+     },
+     "chapter": {
+      "zh": "sqrt,pow,fabs",
+      "en": "sqrt,pow,fabs"
+     }
+    },
+    {
+     "id": 40,
+     "slug": "trig-functions",
+     "title": {
+      "zh": "学习C标准库：&lt;math.h&gt; 2",
+      "en": "Learn C stdlib: &lt;math.h&gt; 2"
+     },
+     "chapter": {
+      "zh": "sin,cos",
+      "en": "sin,cos"
+     }
+    },
+    {
+     "id": 41,
+     "slug": "rounding",
+     "title": {
+      "zh": "学习C标准库：&lt;math.h&gt; 3",
+      "en": "Learn C stdlib: &lt;math.h&gt; 3"
+     },
+     "chapter": {
+      "zh": "floor,ceil,round",
+      "en": "floor,ceil,round"
+     }
+    },
+    {
+     "id": 42,
+     "slug": "ctype",
+     "title": {
+      "zh": "学习C标准库：&lt;ctype.h&gt;",
+      "en": "Learn C stdlib: &lt;ctype.h&gt;"
+     },
+     "chapter": {
+      "zh": "isdigit,isalpha,tolower",
+      "en": "isdigit,isalpha,tolower"
+     }
+    },
+    {
+     "id": 43,
+     "slug": "time-clock",
+     "title": {
+      "zh": "学习C标准库：&lt;time.h&gt;",
+      "en": "Learn C stdlib: &lt;time.h&gt;"
+     },
+     "chapter": {
+      "zh": "time,clock",
+      "en": "time,clock"
+     }
+    },
+    {
+     "id": 44,
+     "slug": "assert",
+     "title": {
+      "zh": "学习C标准库：&lt;assert.h&gt;",
+      "en": "Learn C stdlib: &lt;assert.h&gt;"
+     },
+     "chapter": {
+      "zh": "assert",
+      "en": "assert"
+     }
+    }
+   ]
+  },
+  {
+   "slug": "c-algo",
+   "title": {
+    "zh": "C 算法入门 (Beta)",
+    "en": "C Algorithms (Beta)"
+   },
+   "desc": {
+    "zh": "早期测试，可能包含错误。",
+    "en": "Early access. May contain bugs."
+   },
+   "level": {
+    "zh": "进阶",
+    "en": "Intermediate"
+   },
+   "playground": null,
+   "lessons": [
+    {
+     "id": 1,
+     "slug": "counting-ops",
+     "title": {
+      "zh": "大 O：数操作次数",
+      "en": "Big O: counting operations"
+     },
+     "chapter": {
+      "zh": "O(n) 入门",
+      "en": "O(n) intro"
+     }
+    },
+    {
+     "id": 2,
+     "slug": "nested-loops",
+     "title": {
+      "zh": "嵌套循环 O(n²)",
+      "en": "Nested loops O(n²)"
+     },
+     "chapter": {
+      "zh": "逆序对",
+      "en": "inversion pairs"
+     }
+    },
+    {
+     "id": 3,
+     "slug": "factorial-recursion",
+     "title": {
+      "zh": "递归 · 阶乘",
+      "en": "Recursion · factorial"
+     },
+     "chapter": {
+      "zh": "base case + 自相似",
+      "en": "base + self-similar"
+     }
+    },
+    {
+     "id": 4,
+     "slug": "fibonacci-recursion",
+     "title": {
+      "zh": "递归 · 斐波那契",
+      "en": "Recursion · Fibonacci"
+     },
+     "chapter": {
+      "zh": "体会重复计算",
+      "en": "feel the redundancy"
+     }
+    },
+    {
+     "id": 5,
+     "slug": "reverse-string-recursion",
+     "title": {
+      "zh": "递归 · 反转字符串",
+      "en": "Recursion · reverse string"
+     },
+     "chapter": {
+      "zh": "尾递归思路",
+      "en": "tail-recursive idea"
+     }
+    },
+    {
+     "id": 6,
+     "slug": "linear-search",
+     "title": {
+      "zh": "线性搜索",
+      "en": "Linear search"
+     },
+     "chapter": {
+      "zh": "O(n)",
+      "en": "O(n)"
+     }
+    },
+    {
+     "id": 7,
+     "slug": "binary-search",
+     "title": {
+      "zh": "二分搜索",
+      "en": "Binary search"
+     },
+     "chapter": {
+      "zh": "O(log n)",
+      "en": "O(log n)"
+     }
+    },
+    {
+     "id": 8,
+     "slug": "bubble-sort",
+     "title": {
+      "zh": "冒泡排序",
+      "en": "Bubble sort"
+     },
+     "chapter": {
+      "zh": "稳定 · 自适应",
+      "en": "stable · adaptive"
+     }
+    },
+    {
+     "id": 9,
+     "slug": "selection-sort",
+     "title": {
+      "zh": "选择排序",
+      "en": "Selection sort"
+     },
+     "chapter": {
+      "zh": "交换最少",
+      "en": "fewest swaps"
+     }
+    },
+    {
+     "id": 10,
+     "slug": "insertion-sort",
+     "title": {
+      "zh": "插入排序",
+      "en": "Insertion sort"
+     },
+     "chapter": {
+      "zh": "近有序最优",
+      "en": "best for near-sorted"
+     }
+    },
+    {
+     "id": 11,
+     "slug": "merge-step",
+     "title": {
+      "zh": "归并的核心 · 合并步骤",
+      "en": "Merge sort's core · merge step"
+     },
+     "chapter": {
+      "zh": "双指针",
+      "en": "two pointers"
+     }
+    },
+    {
+     "id": 12,
+     "slug": "merge-sort",
+     "title": {
+      "zh": "完整归并排序",
+      "en": "Full merge sort"
+     },
+     "chapter": {
+      "zh": "分治 · 稳定",
+      "en": "divide & conquer · stable"
+     }
+    },
+    {
+     "id": 13,
+     "slug": "quick-sort",
+     "title": {
+      "zh": "快速排序",
+      "en": "Quicksort"
+     },
+     "chapter": {
+      "zh": "Lomuto 分区",
+      "en": "Lomuto partition"
+     }
+    },
+    {
+     "id": 14,
+     "slug": "linked-list-traverse",
+     "title": {
+      "zh": "单链表 · 创建与遍历",
+      "en": "Linked list · create & traverse"
+     },
+     "chapter": {
+      "zh": "malloc + next 指针",
+      "en": "malloc + next pointer"
+     }
+    },
+    {
+     "id": 15,
+     "slug": "linked-list-insert-delete",
+     "title": {
+      "zh": "单链表 · 头插与删除",
+      "en": "Linked list · insert & delete"
+     },
+     "chapter": {
+      "zh": "指针拆接",
+      "en": "pointer rewiring"
+     }
+    },
+    {
+     "id": 16,
+     "slug": "linked-list-reverse",
+     "title": {
+      "zh": "单链表 · 反转",
+      "en": "Linked list · reverse"
+     },
+     "chapter": {
+      "zh": "三指针迭代",
+      "en": "three-pointer iteration"
+     }
+    },
+    {
+     "id": 17,
+     "slug": "stack-paren",
+     "title": {
+      "zh": "栈 · 括号匹配",
+      "en": "Stack · paren match"
+     },
+     "chapter": {
+      "zh": "LIFO 经典应用",
+      "en": "classic LIFO use"
+     }
+    },
+    {
+     "id": 18,
+     "slug": "queue-circular",
+     "title": {
+      "zh": "队列 · 循环数组",
+      "en": "Queue · circular array"
+     },
+     "chapter": {
+      "zh": "FIFO + ring buffer",
+      "en": "FIFO + ring buffer"
+     }
+    },
+    {
+     "id": 19,
+     "slug": "tree-traversal",
+     "title": {
+      "zh": "二叉树遍历",
+      "en": "Binary tree traversal"
+     },
+     "chapter": {
+      "zh": "前序 / 中序 / 后序",
+      "en": "pre / in / post order"
+     }
+    },
+    {
+     "id": 20,
+     "slug": "bst-search-insert",
+     "title": {
+      "zh": "BST · 查找与插入",
+      "en": "BST · search & insert"
+     },
+     "chapter": {
+      "zh": "O(log n) 容器",
+      "en": "O(log n) container"
+     }
+    },
+    {
+     "id": 21,
+     "slug": "kmp-next",
+     "title": {
+      "zh": "KMP · 构造 next[]",
+      "en": "KMP · build next[]"
+     },
+     "chapter": {
+      "zh": "失败函数",
+      "en": "failure function"
+     }
+    },
+    {
+     "id": 22,
+     "slug": "kmp-search",
+     "title": {
+      "zh": "KMP · 主匹配",
+      "en": "KMP · main matcher"
+     },
+     "chapter": {
+      "zh": "i 不回退",
+      "en": "i never backtracks"
+     }
+    },
+    {
+     "id": 23,
+     "slug": "hash-chaining",
+     "title": {
+      "zh": "哈希表 · 链地址法",
+      "en": "Hash table · chaining"
+     },
+     "chapter": {
+      "zh": "O(1) 平均查找",
+      "en": "O(1) avg lookup"
+     }
+    },
+    {
+     "id": 24,
+     "slug": "heap-sort",
+     "title": {
+      "zh": "二叉堆 · 堆排序",
+      "en": "Binary heap · heap sort"
+     },
+     "chapter": {
+      "zh": "build_heap + heapify",
+      "en": "build_heap + heapify"
+     }
+    },
+    {
+     "id": 25,
+     "slug": "lcs-dp",
+     "title": {
+      "zh": "动态规划 · 最长公共子序列",
+      "en": "DP · Longest Common Subsequence"
+     },
+     "chapter": {
+      "zh": "填表 + O(mn)",
+      "en": "table fill + O(mn)"
+     }
+    }
+   ]
+  }
+ ]
+}
